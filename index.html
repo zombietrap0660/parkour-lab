@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>PARKOUR LAB — Roblox Obby Project</title>
+<meta name="description" content="Экспериментальная паркур-карта в Roblox с уникальными механиками и хазардами." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=JetBrains+Mono:wght@400;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="grid-bg"></div>
+<div class="noise"></div>
+
+<header class="nav">
+  <div class="nav__logo">
+    <span class="logo-mark">▲</span>
+    <span class="logo-text">PARKOUR/LAB</span>
+  </div>
+  <nav class="nav__links">
+    <a href="#about">_about</a>
+    <a href="#mechanics">_mechanics</a>
+    <a href="#gallery">_gallery</a>
+    <a href="#team">_team</a>
+  </nav>
+  <a href="#play" class="nav__cta">SOON ◷</a>
+</header>
+
+<section class="hero">
+  <div class="hero__meta">
+    <span>BUILD v0.4</span>
+    <span class="dot"></span>
+    <span>STATUS: IN DEVELOPMENT</span>
+    <span class="dot"></span>
+    <span>RBX/2026</span>
+  </div>
+
+  <h1 class="hero__title">
+    <span class="line">JUMP.</span>
+    <span class="line line--accent">FALL.</span>
+    <span class="line">REPEAT.</span>
+  </h1>
+
+  <p class="hero__sub">
+    Экспериментальная паркур-карта в Roblox. Падающие лестницы, маятники,
+    конвейеры, вращающиеся комнаты — всё, что заставит тебя пожалеть о клике "play".
+  </p>
+
+  <div class="hero__actions">
+    <span class="btn btn--primary btn--disabled">СКОРО В ROBLOX</span>
+    <a href="#mechanics" class="btn btn--ghost">смотреть механики ↓</a>
+  </div>
+
+  <div class="hero__stats">
+    <div class="stat">
+      <div class="stat__num">13+</div>
+      <div class="stat__label">механик</div>
+    </div>
+    <div class="stat">
+      <div class="stat__num">∞</div>
+      <div class="stat__label">смертей</div>
+    </div>
+    <div class="stat">
+      <div class="stat__num">2</div>
+      <div class="stat__label">разработчика</div>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="about">
+  <div class="section-label">// 01 — ABOUT</div>
+  <div class="about__grid">
+    <h2 class="section-title">Не очередной<br/><span class="accent">obby</span>.</h2>
+    <div class="about__text">
+      <p>
+        PARKOUR LAB — это студенческий проект двух разработчиков, который начался как
+        эксперимент с физикой Roblox и превратился в карту с десятком уникальных хазардов.
+      </p>
+      <p>
+        Мы не используем готовые модели или ассеты. Каждая механика написана с нуля на Luau —
+        от падающих платформ до вращающихся цилиндрических комнат, в которых пол меняется со стенами.
+      </p>
+      <p class="muted">
+        → Аудитория: игроки 10–18 лет, фанаты obby и speedrun.<br/>
+        → Платформа: Roblox (PC, mobile, console).<br/>
+        → Стиль: минимализм + неон + жестокость.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="mechanics" class="mechanics">
+  <div class="section-label">// 02 — MECHANICS</div>
+  <h2 class="section-title">Чем мы <span class="accent">убиваем</span> игрока.</h2>
+
+  <div class="mech-grid">
+    <article class="mech">
+      <div class="mech__icon">▣</div>
+      <h3>Kill Bricks</h3>
+      <p>Касание = мгновенный респаун на последнем чекпоинте. Классика, но без неё никуда.</p>
+    </article>
+
+    <article class="mech mech--accent">
+      <div class="mech__icon">◈</div>
+      <h3>Падающие лестницы</h3>
+      <p>Ступенька осыпается через 0.3 сек после касания. Останавливаться нельзя.</p>
+    </article>
+
+    <article class="mech">
+      <div class="mech__icon">◐</div>
+      <h3>Вращающиеся цилиндры</h3>
+      <p>Бежишь по внутренней стороне цилиндра, который медленно крутится. Пол становится стеной.</p>
+    </article>
+
+    <article class="mech">
+      <div class="mech__icon">↔</div>
+      <h3>Маятники</h3>
+      <p>Гигантские пилоны качаются поперёк коридора. Тайминг — твой единственный друг.</p>
+    </article>
+
+    <article class="mech">
+      <div class="mech__icon">▶▶</div>
+      <h3>Конвейеры</h3>
+      <p>Платформа толкает игрока в сторону. LocalScript + Heartbeat — никакой кривой физики.</p>
+    </article>
+
+    <article class="mech mech--accent">
+      <div class="mech__icon">✦</div>
+      <h3>Прыгающие платформы</h3>
+      <p>Bouncepad с настраиваемой силой. Можно перелететь, можно недолететь. Гадай.</p>
+    </article>
+
+    <article class="mech">
+      <div class="mech__icon">◌</div>
+      <h3>Пропеллеры</h3>
+      <p>Крутящиеся лопасти сбивают игрока в пропасть. Просто, эффективно.</p>
+    </article>
+
+    <article class="mech">
+      <div class="mech__icon">▦</div>
+      <h3>Мигающие платформы</h3>
+      <p>Появляются и исчезают по таймеру. Ритм = жизнь.</p>
+    </article>
+
+    <article class="mech">
+      <div class="mech__icon">⌖</div>
+      <h3>Чекпоинты</h3>
+      <p>Сохраняют прогресс. Иначе бы никто не дошёл до конца.</p>
+    </article>
+  </div>
+</section>
+
+<section id="gallery" class="gallery">
+  <div class="section-label">// 03 — GALLERY</div>
+  <h2 class="section-title">Скриншоты <span class="accent">с поля боя</span>.</h2>
+
+  <div class="gallery__grid">
+    <figure class="shot shot--large">
+      <img src="img/overview.png" alt="Общий вид карты в Roblox Studio" loading="lazy" />
+      <figcaption>
+        <span class="shot__tag">[MAP / OVERVIEW]</span>
+        <span class="shot__caption">Полный вид карты — десятки секций, через которые предстоит пройти игроку</span>
+      </figcaption>
+    </figure>
+
+    <figure class="shot">
+      <img src="img/gameplay.png" alt="Геймплей паркур-карты" loading="lazy" />
+      <figcaption>
+        <span class="shot__tag">[GAMEPLAY]</span>
+        <span class="shot__caption">Игровой процесс</span>
+      </figcaption>
+    </figure>
+
+    <figure class="shot">
+      <img src="img/script.png" alt="Код Luau в Roblox Studio" loading="lazy" />
+      <figcaption>
+        <span class="shot__tag">[CODE / LUAU]</span>
+        <span class="shot__caption">Скрипт вращающегося цилиндра</span>
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="team" class="team">
+  <div class="section-label">// 04 — TEAM</div>
+  <h2 class="section-title">Два <span class="accent">разработчика</span>.</h2>
+
+  <div class="team__grid">
+    <div class="member">
+      <div class="member__avatar">JJ</div>
+      <div class="member__role">SCRIPTING / GAMEPLAY</div>
+      <h3>JJ</h3>
+      <p>
+        Пишет всю игровую логику на Luau. Хазарды, чекпоинты, движущиеся платформы,
+        физика, респаун-системы — всё через скрипты.
+      </p>
+      <div class="tags">
+        <span>Luau</span><span>Heartbeat</span><span>LocalScript</span>
+      </div>
+    </div>
+
+    <div class="member">
+      <div class="member__avatar">★</div>
+      <div class="member__role">LEVEL DESIGN / VISUALS</div>
+      <h3>Friend</h3>
+      <p>
+        Строит геометрию уровней, продумывает визуальный стиль карты, размещает
+        ассеты и работает над освещением.
+      </p>
+      <div class="tags">
+        <span>Studio</span><span>Lighting</span><span>Geometry</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="play" class="cta">
+  <div class="cta__badge">IN DEVELOPMENT</div>
+  <h2 class="cta__title">Готов <span class="accent">упасть</span>?</h2>
+  <p>Карта пока не доступна для общего доступа — мы ещё работаем над механиками и балансом. Релиз будет тогда, когда сами не сможем её пройти.</p>
+  <div class="progress">
+    <div class="progress__label">
+      <span>BUILD PROGRESS</span>
+      <span>~70%</span>
+    </div>
+    <div class="progress__bar">
+      <div class="progress__fill"></div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div>© 2026 PARKOUR/LAB · сделано для школьного проекта по цифровому дизайну</div>
+  <div class="footer__meta">build.0.4 / lv-LV / not-affiliated-with-roblox-corp</div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
